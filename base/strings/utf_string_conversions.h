@@ -23,8 +23,8 @@
 
 namespace base {
 
-// These convert between UTF-8, -16, and -32 strings. They are potentially slow,
-// so avoid unnecessary conversions.
+// These convert between UTF-8, -16, and -32 strings. 
+// They are potentially slow, so avoid unnecessary conversions.
 std::string WideToUTF8 (const std::wstring& data);
 std::wstring UTF8ToWide(const std::string& data);
 

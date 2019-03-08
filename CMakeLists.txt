@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 3.5.1)
 
-project(cpp-framework VERSION "1.1.0")
+project(basis VERSION "1.1.0")
 
 # Global include path for all libs.
 include_directories(${PROJECT_SOURCE_DIR})  
