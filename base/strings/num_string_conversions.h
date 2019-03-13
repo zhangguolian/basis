@@ -23,28 +23,6 @@
 
 namespace base {
 
-// Number -> string conversions
-std::string NumberToString(int value);
-std::wstring NumberToWString(int value);
-
-std::string NumberToString(unsigned int value);
-std::wstring NumberToWString(unsigned int value);
-
-std::string NumberToString(long value);
-std::wstring NumberToWString(long value);
-
-std::string NumberToString(unsigned long value);
-std::wstring NumberToWString(unsigned long value);
-
-std::string NumberToString(long long value);
-std::wstring NumberToWString(long long value);
-
-std::string NumberToString(unsigned long long value);
-std::wstring NumberToWString(unsigned long long value);
-
-std::string NumberToString(double value);
-std::wstring NumberToWString(double value);
-
 // String -> number conversions.
 int8_t StringToInt8(const std::string& data);
 int8_t StringToInt8(const std::wstring& data);
@@ -69,9 +47,6 @@ float StringToFloat(const std::wstring& data);
 
 double StringToDouble(const std::string& data);
 double StringToDouble(const std::wstring& data);
-
-bool StringToBool(const std::string& data);
-bool StringToBool(const std::wstring& data);
 
 // Hex encoding
 // ......

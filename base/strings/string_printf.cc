@@ -18,11 +18,12 @@
 
 #include "base/strings/string_printf.h"
 
-#include <vector>
 #include <stdarg.h>
 #ifdef WIN32
 #include <corecrt_wstdio.h>
 #endif
+
+#include <vector>
 
 namespace base {
 
@@ -130,5 +131,5 @@ const std::wstring& StringAppendPrintf(std::wstring& result, const wchar_t* form
 }
 #endif
 
-}
+} // namespace base
 

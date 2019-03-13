@@ -14,4 +14,8 @@
 # limitations under the License.
 #
 
-add_subdirectory(strings)
+add_executable(string_printf_test "string_printf_test.cc")
+target_link_libraries(string_printf_test strings)
+
+add_executable(num_string_conversions_test "num_string_conversions_test.cc")
+target_link_libraries(num_string_conversions_test strings)
