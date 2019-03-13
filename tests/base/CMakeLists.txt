@@ -14,12 +14,5 @@
 # limitations under the License.
 #
 
-cmake_minimum_required(VERSION 3.5.1)
-
-project(basis VERSION "1.1.0")
-
-# Global include path for all libs.
-include_directories(${PROJECT_SOURCE_DIR})
-
-add_subdirectory(base)
-add_subdirectory(tests)
+add_executable(string_printf_test "string_printf_test.cc")
+target_link_libraries(string_printf_test strings)

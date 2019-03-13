@@ -1,6 +1,6 @@
 /*
  *
- * Copyright 2018 Guolian Zhang.
+ * Copyright 2019 Guolian Zhang.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,15 +25,21 @@ namespace base {
 
 // Return a C++ string given printf-like input.
 std::string StringPrintf(const char* format, ...);
+#ifdef WIN32
 std::wstring StringPrintf(const wchar_t* format, ...);
+#endif
 
 // Store result into a supplied string.
-void SStringPrintf(std::string& output, const char* format, ...);
-void SStringPrintf(std::wstring& output, const wchar_t* format, ...);
+const std::string& SStringPrintf(std::string& result, const char* format, ...);
+#ifdef WIN32
+const std::wstring& SStringPrintf(std::wstring& result, const wchar_t* format, ...);
+#endif
 
 // Append result to a supplied string.
-void StringAppendPrintf(std::string& output, const char* format, ...);
-void StringAppendPrintf(std::wstring& output, const wchar_t* format, ...);
+const std::string& StringAppendPrintf(std::string& result, const char* format, ...);
+#ifdef WIN32
+const std::wstring& StringAppendPrintf(std::wstring& result, const wchar_t* format, ...);
+#endif
 
 } // namespace base
 

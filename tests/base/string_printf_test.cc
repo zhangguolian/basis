@@ -16,20 +16,14 @@
  *
  */
 
-#ifndef BASE_UTF_STRING_CONVERSIONS_H_
-#define BASE_UTF_STRING_CONVERSIONS_H_
+#include <iostream>
 
-#include <string>
+#include "base/strings/string_printf.h"
 
-namespace base {
-
-// These convert between UTF-8, -16, and -32 strings. 
-// They are potentially slow, so avoid unnecessary conversions.
-std::string WideToUTF8 (const std::wstring& data);
-std::wstring UTF8ToWide(const std::string& data);
-
-// ......
-
+int main() {
+    std::string result = base::StringPrintf("Hello %s", "World"); 
+    std::cout << result << std::endl;
+    std::cout << base::SStringPrintf(result, "Hello %s", "World") << std::endl;
+    std::cout << base::StringAppendPrintf(result, "Hello %s", "World") << std::endl;
+    return 0;
 }
-
-#endif // BASE_UTF_STRING_CONVERSIONS_H_
